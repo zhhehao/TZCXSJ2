@@ -9,12 +9,14 @@ int main(void) {
     while (scanf("%d", &n) == 1) {
         scanf("%d%d", &ri, &rj);
         ans = rj - ri;
-        int t, na;
+        int t, na, tt;
         int len = n - 2;
         for (int i = 0; i < len; i++) {
             scanf("%d", &t);
             if (t > rj) {
+                tt = rj;
                 rj = t;
+                if (tt < ri) ri = tt;
                 na = rj - ri;
                 if (na > ans) ans = na;
             }
