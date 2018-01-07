@@ -12,15 +12,17 @@ void put_out() {
 
 void bubblesort() {
 	int flag = 1;
+	int j = 0;
 	while (flag) {
 		flag = 0;
-		for (int i = n-1; i > 0; i--) {
+		for (int i = n-1; i >= j+1; i--) {
 			if (a[i] < a[i-1]) {
 				swap(a[i], a[i-1]);
 				flag = 1;
 				cnt++;
 			}
 		}
+		j++;
 	}
 }
 
